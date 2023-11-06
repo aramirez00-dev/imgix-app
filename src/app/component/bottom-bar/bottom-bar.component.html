@@ -1,0 +1,16 @@
+<div class="bottom-bar">
+  <div class="undo-button">
+    <button mat-button class="button" (click)="undo()" [disabled]="!canUndo()">Undo</button>
+  </div>
+  <span class="current-place">
+    <ng-container *ngIf="currentPlaceInHistory !== 0; else alternateText">
+      You're currently seeing image number {{ currentPlaceInHistory + 1 }} out of {{ historyLength }}
+    </ng-container>
+    <ng-template #alternateText>
+      You're currently seeing the {{ currentPlaceInHistory + 1 }}st image
+    </ng-template>
+  </span>
+  <div class="redo-button">
+    <button mat-button class="button" (click)="redo()" [disabled]="!canRedo()">Redo</button>
+  </div>
+</div>

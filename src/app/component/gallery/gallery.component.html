@@ -1,0 +1,7 @@
+<div class="gallery-container">
+    <div class="gallery">
+        <div *ngFor="let image of images" (click)="selectImage(image.url)">
+            <img class="gallery-item" [src]="image.url" alt="Gallery Image" />
+        </div>
+    </div>
+</div>

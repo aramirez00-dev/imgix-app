@@ -1,0 +1,46 @@
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  background: grey;
+  padding: 10px 0;
+  width: 80%;
+  text-align: center;
+  height: 5%;
+  left: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('../../../assets/images/background-gray.png');
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+
+.button {
+  background-color: white;
+}
+
+.undo-button,
+.redo-button {
+  flex: 1;
+  display: flex;
+}
+
+.undo-button{
+  justify-content: flex-start;
+  padding-left: 5vh;
+}
+
+.redo-button {
+  justify-content: flex-end;
+  padding-right: 5vh;
+}
+
+.current-place{
+  color: white;
+  font-weight: 700;
+}
+
+span {
+  text-align: center;
+}

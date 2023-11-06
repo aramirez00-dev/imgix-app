@@ -1,0 +1,121 @@
+<div class="sidebar" [formGroup]="sidebarForm">
+
+    <h2>Welcome to imgix!</h2>
+    <div class="form-group centered">
+      <h3>Flip</h3>
+      <select formControlName="selectedFlip" (change)="updateImage(sidebarForm.value)">
+        <option *ngFor="let option of rotationOptions.flipOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+
+    <div class="form-group centered">
+      <h3>Orientation</h3>
+      <select formControlName="selectedOrientation" (change)="updateImage(sidebarForm.value)">
+        <option *ngFor="let option of rotationOptions.orientOptions" [value]="option">{{ option }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <h3>Rotation</h3>
+      <span>{{ rotationOptions.rotMin }}</span>
+      <input type="range" formControlName="selectedRotation" [min]="rotationOptions.rotMin" [max]="rotationOptions.rotMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ rotationOptions.rotMax }}</span>
+    </div>
+
+    <h3>Brightness</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.briMin }}</span>
+      <input type="range" formControlName="selectedBrightness" [min]="adjustmentOptions.briMin" [max]="adjustmentOptions.briMax"
+      (mouseup)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.briMax }}</span>
+    </div>
+
+    <h3>Contrast</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.conMin }}</span>
+      <input type="range" formControlName="selectedContrast" [min]="adjustmentOptions.conMin" [max]="adjustmentOptions.conMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.conMax }}</span>
+    </div>
+
+    <h3>Exposure</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.expMin }}</span>
+      <input type="range" formControlName="selectedExposure" [min]="adjustmentOptions.expMin" [max]="adjustmentOptions.expMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.expMax }}</span>
+    </div>
+
+    <h3>Gamma</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.gamMin }}</span>
+      <input type="range" formControlName="selectedGamma" [min]="adjustmentOptions.gamMin" [max]="adjustmentOptions.gamMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.gamMax }}</span>
+    </div>
+
+    <h3>Highlights</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.highMin }}</span>
+      <input type="range" formControlName="selectedHighlight" [min]="adjustmentOptions.highMin" [max]="adjustmentOptions.highMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.highMax }}</span>
+    </div>
+
+    <h3>Hue</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.hueMin }}</span>
+      <input type="range" formControlName="selectedHue" [min]="adjustmentOptions.hueMin" [max]="adjustmentOptions.hueMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.hueMax }}</span>
+    </div>
+
+    <h3>Saturation</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.satMin }}</span>
+      <input type="range" formControlName="selectedSaturation" [min]="adjustmentOptions.satMin" [max]="adjustmentOptions.satMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.satMax }}</span>
+    </div>
+
+    <h3>Shadows</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.shadMin }}</span>
+      <input type="range" formControlName="selectedShadow" [min]="adjustmentOptions.shadMin" [max]="adjustmentOptions.shadMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.shadMax }}</span>
+    </div>
+
+    <h3>Sharpness</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.sharpMin }}</span>
+      <input type="range" formControlName="selectedSharpness" [min]="adjustmentOptions.sharpMin" [max]="adjustmentOptions.sharpMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.sharpMax }}</span>
+    </div>
+
+    <h3>Unsharp Mask</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.usmMin }}</span>
+      <input type="range" formControlName="selectedUnsharpMask" [min]="adjustmentOptions.usmMin" [max]="adjustmentOptions.usmMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.usmMax }}</span>
+    </div>
+
+    <h3>Unsharp Mask Radius</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.usmradMin }}</span>
+      <input type="range" formControlName="selectedUnsharpRadius" [min]="adjustmentOptions.usmradMin" [max]="adjustmentOptions.usmradMax"
+        (change)="updateImage(sidebarForm.value)">
+      <span>{{ adjustmentOptions.usmradMax }}</span>
+    </div>
+
+    <h3>Vibrance</h3>
+    <div class="form-group">
+      <span>{{ adjustmentOptions.vibMin }}</span>
+      <input type="range" formControlName="selectedVibrance" [min]="adjustmentOptions.vibMin" [max]="adjustmentOptions.vibMax"
+        (change)="updateImage(sidebarForm.value)" >
+      <span>{{ adjustmentOptions.vibMax }}</span>
+    </div>
+  </div>

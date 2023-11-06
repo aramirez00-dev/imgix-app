@@ -1,0 +1,27 @@
+.gallery-container {
+    overflow-x: auto;
+    position: relative;
+    top: 7.5%;
+    left: 20%;
+    width: 80%;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: flex-start;
+}
+
+  .gallery-item {
+    cursor: pointer;
+    width: 15vh;
+    height: 15vh;
+    margin-right: 3vh;
+    transition: filter 0.3s;
+    display: inline-block;
+  }
+
+  .gallery-item:hover {
+    filter: brightness(1.3);
+  }
