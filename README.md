@@ -1,12 +1,12 @@
 # imgix-app
 
-Bienvenido a mi app Angular imgiX. Para poder utilizarla:
+Aplicación imgiX creada en Angular. Ejercicio NaNLabs.
 
 ## Prerequisitos
 
 Asegurarse de tener instalado:
 
-- Node.js and npm
+- Node.js y npm
 - Angular CLI
 - Git
 
@@ -26,3 +26,17 @@ Asegurarse de tener instalado:
      ng serve
 
 4. Ir a http://localhost:4200/ para acceder a la app.
+
+## Funcionalidades
+
+* Poder elegir una imagen de entre una galería consumida desde una lista de imágenes externa.
+* Modificar la imagen seleccionada a través de diferentes modificadores.
+* Navegar el historial de modificaciones a través de botones de Undo y Redo.
+
+## Pendientes
+
+* Agregar una funcionalidad de descarga de imagen generada.
+* Mejorar el reseteo de valores de los modificadores en determinados casos de uso.
+* Mejorar la responsividad.
+* Agregar tests generales a toda la aplicación.
+
